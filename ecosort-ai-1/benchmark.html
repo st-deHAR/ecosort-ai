@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoSort AI — Benchmark</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="benchmark.js"></script>
+</head>
+<body>
+  <header class="navbar"><div class="container nav-content">
+    <a class="brand" href="index.html"><span class="brand-icon">♻️</span><span><strong>EcoSort <i>AI</i></strong><small>Benchmark</small></span></a>
+    <a class="nav-link" href="index.html">← Back to app</a>
+  </div></header>
+  <main class="container bench-wrap">
+    <article class="card">
+      <div class="section-heading"><div><span class="step">INDEPENDENT TEST</span><h2>Measure real accuracy</h2></div>
+        <span id="modelStatus" class="status loading" role="status">Model not loaded yet</span></div>
+      <p class="metric-note">Select photos you took or have the right to use. Each file name must start with its true category: plastic, glass, metal, paper, cardboard, organic, battery, textile or general (e.g. <code>plastic_01.jpg</code>). Images are processed in your browser only. Report the result with the number of images tested.</p>
+      <input id="benchInput" type="file" accept="image/*" multiple>
+      <div id="benchSummary" class="metric-note"></div>
+      <div class="button-row" style="margin-top:12px">
+        <button id="runBenchBtn" class="button primary" type="button" disabled>Run benchmark</button>
+        <button id="stopBenchBtn" class="button secondary" type="button" disabled>Stop</button>
+        <button id="benchCsvBtn" class="button outline" type="button" disabled>Download CSV</button>
+      </div>
+      <p id="benchProgress" class="metric-note"></p>
+    </article>
+    <article class="card bench-card"><div id="benchResults"></div></article>
+  </main>
+</body>
+</html>
